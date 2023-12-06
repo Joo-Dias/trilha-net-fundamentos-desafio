@@ -31,6 +31,13 @@ namespace DesafioFundamentos.Models
 
         public void RemoverVeiculo()
         {
+            Console.WriteLine("Lista dos carros no estacionamento: ");
+            int contador = 1;
+            foreach(string placaV in veiculos)
+            {
+                Console.WriteLine($"Carro N°{contador} - {placaV}");
+                contador++;
+            }
             Console.WriteLine("Digite a placa do veículo para remover:");
             string placa = Console.ReadLine().ToUpper();
 
@@ -64,7 +71,7 @@ namespace DesafioFundamentos.Models
             if (veiculos.Any())
             {
                 Console.WriteLine("Os veículos estacionados são:");
-                int contador = 0;
+                int contador = 1;
                 foreach(string placa in veiculos)
                 {
                     Console.WriteLine($"Carro N°{contador} - {placa}");
